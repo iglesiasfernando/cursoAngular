@@ -8,9 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class ListaItemsComponent implements OnInit{
 
     constructor(){
-      alert("alert constructor")
     }
     ngOnInit(): void {
-       alert("se ejecuta onInit")
+    
     }
 }
