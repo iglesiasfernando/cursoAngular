@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,Input, Output,AfterViewInit, EventEmitter} from '@angular/core';
 import { Item } from 'src/app/model/item';
 
 @Component({
@@ -8,10 +8,16 @@ import { Item } from 'src/app/model/item';
 })
 export class ItemComponent {
 
-  protected item : Item;
+  @Input() item : Item
+  @Output() afterViewInit = new EventEmitter<Item>(); //aca podemos mandar el tipo de dato que nosotros querramos
 
   constructor(){
-    this.item = { titulo : "Mi primer item",descripcion:"Este es mi primer item",estado : 0 , fecha : new Date(),eliminado : false}
-  
   }
+
+  ngAfterViewInit(){
+    this.afterViewInit.emit(this.item) 
+
+  } 
+  
+
 }
