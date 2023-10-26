@@ -8,16 +8,35 @@ import { Item } from 'src/app/model/item';
 })
 export class ListaItemsComponent implements OnInit{
 
-    item : Item 
+    itemList : Item[]
 
     constructor(){
-      this.item = { titulo : "Mi primer item",descripcion:"Este es mi primer item",estado : 0 , fecha : new Date(),eliminado : false}
+      this.itemList = [
+        { 
+          titulo : "Tarea n° 1",
+          descripcion:"Esta es mi primera tarea",
+          estado : 0 , 
+          fecha : new Date(),
+          eliminado : false
+        },{ 
+          titulo : "Tarea eliminada",
+          descripcion:"Mi tarea eliminado",
+          estado : 0 , 
+          fecha : new Date(),
+          eliminado : true
+        },{ 
+          titulo : "Mi tercera tarea",
+          descripcion:"Esta es mi tercera tarea importante",
+          estado : 1 , 
+          fecha : new Date(),
+          eliminado : false
+        }]
 
     }
     ngOnInit(): void {
     
     }
     itemAfterVieInit(item : Item){
-      alert(JSON.stringify(item))
+      //alert(JSON.stringify(item))
     }
 }

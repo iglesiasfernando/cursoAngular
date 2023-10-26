@@ -1,5 +1,5 @@
-<div >
-    <app-item [item]="item" (afterViewInit)="itemAfterVieInit($event)"></app-item>
+<div *ngFor="let item of itemList" >
+    <app-item *ngIf="!item.eliminado" [item]="item" (afterViewInit)="itemAfterVieInit($event)"></app-item>
 </div>
 
 
