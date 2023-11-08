@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AppRoutes } from 'src/app/app.router';
 import { Item } from 'src/app/model/item';
 
 @Component({
@@ -9,7 +10,7 @@ import { Item } from 'src/app/model/item';
 export class ListaItemsComponent implements OnInit{
 
     itemList : Item[]
-
+    public nuevoItemLink : string = "/" + AppRoutes.NUEVO_ITEM
     constructor(){
       this.itemList = [
         { 
