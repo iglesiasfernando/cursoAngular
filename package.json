@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build  --base-href=/cursoAngular",
+    "build": "ng build --base-href=/cursoAngular/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
